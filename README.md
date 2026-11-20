@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="client/src/assets/manor-rosewood.png" alt="The Last Testament — Rosewood Manor, Case File 001" width="100%" />
+<img src="client/src/assets/manor-rosewood.jpg" alt="The Last Testament — Rosewood Manor, Case File 001" width="100%" />
 
 # THE LAST TESTAMENT
 
