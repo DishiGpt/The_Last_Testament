@@ -1,34 +1,88 @@
-# PyBe — Rosewood Manor
+<div align="center">
 
-PyBe is a scenario-driven Python learning app. This version turns it into a murder-mystery: the learner plays the detective, solves a six-part case by tapping through short slides and multiple-choice questions, and discovers the Python ideas behind each step as the case files close. There is no login and no external database or AI key.
+<img src="assets/the-last-testament-banner.png" alt="The Last Testament — Rosewood Manor, Case File 001" width="100%" />
 
-Author: Dishi Gupta (VLED Lab, IIT Ropar, Summer Internship 2026)
+# THE LAST TESTAMENT
 
-## How it plays
-1. **Onboarding:** three short screens, then straight into the case.
-2. **Case files:** six connected files (the case opens, the notes, the timeline, the alibis, narrowing it down, the reveal). Each is a series of short slides with one question at a time.
-3. **No typing:** every step is multiple choice, with instant feedback and a retry on wrong answers. Correct answers are shuffled across A–D.
-4. **Plain language:** wording is written for a first-year student with no coding background. Concept names stay hidden until a case file is finished.
-5. **Code reveal:** when a file closes, its Python is shown with a plain-words comment on every line.
-6. **Suspect Board:** starts as five unnamed slots, reveals each suspect as the story introduces them, re-ranks them as clues arrive, moves cleared suspects to a Cleared drawer, and ends with the culprit at 100/100.
-7. **Ledger:** a case notebook that logs the concepts learned after each completed file.
+### *An inheritance. A murder. Six files to uncover the truth.*
+
+**ROSEWOOD MANOR · CASE FILE 001**
+
+[About](#about) · [How It Plays](#how-it-plays) · [Features](#features) · [Tech Stack](#tech-stack) · [Setup](#setup) · [Quality Checks](#quality-checks)
+
+</div>
+
+---
+
+## EVERY FAMILY HAS SECRETS
+
+## About
+
+**The Last Testament** is a scenario-driven Python learning game wrapped in a gothic murder mystery.
+
+You play the detective. Your task is to solve a six-part case at Rosewood Manor by examining clues, following timelines, questioning alibis, and narrowing down the suspects. Each case file teaches an underlying Python idea through short, interactive slides and multiple-choice questions. When a file closes, the Python behind the investigation is revealed and explained line by line in plain language.
+
+The experience is designed for beginners, including learners with no prior coding background.
+
+- No login or account required.
+- No external database.
+- No external AI service or API key.
+- Learning logic is deterministic and runs locally.
+
+## How It Plays
+
+The investigation unfolds across six connected case files:
+
+1. **The Case Opens** — enter Rosewood Manor and discover the crime.
+2. **The Notes** — examine the first pieces of evidence.
+3. **The Timeline** — arrange events and understand when they happened.
+4. **The Alibis** — compare each suspect's account with the evidence.
+5. **Narrowing It Down** — connect the clues and eliminate possibilities.
+6. **The Reveal** — identify the culprit and close the case.
+
+### The gameplay loop
+
+- **Onboarding:** three short screens introduce the experience, then the case begins.
+- **Case files:** each file contains short slides and one question at a time.
+- **No typing:** every interaction is multiple choice, with instant feedback and a retry after an incorrect answer.
+- **Fair answer placement:** correct options are shuffled across A–D.
+- **Plain language:** explanations are written for a first-year student. Concept names remain hidden until the relevant file is complete.
+- **Code reveal:** after a file closes, its Python code appears with a plain-language comment on every line.
+- **Suspect Board:** five initially unnamed slots reveal suspects as the story introduces them. Their rankings change as clues arrive; cleared suspects move to a Cleared drawer, and the final culprit reaches 100/100.
+- **Ledger:** a case notebook records the concepts learned after each completed file.
 
 ## Features
-- Six-part chained case study in a new **Advanced** tier (`storyId`, `order`, `nextScenarioId`), replacing the old standalone scenarios
-- Slide-based, multiple-choice-only flow with visuals instead of long text
-- Light and dark themes (haunted-mansion dark with lightning, a daylight counterpart in light), onboarding, sidebar case navigation, and progress saved in `localStorage`
-- Suspect Board driven by hand-authored clue events and a pure `computeBoard` function
-- Case bible: one source of truth for the victim, suspects, witnesses, clues, times, and rooms, checked by an audit script
-- Concept-driven Python code generation, so each case file gets code that matches the idea it taught
-- Supplied manor and suspect photos used throughout
 
-## Tech stack
-- React + Vite (client)
-- Node.js + Express (server)
-- Local JSON-file storage, no database or authentication
+- **Six-part chained case:** the new Advanced tier links scenarios through `storyId`, `order`, and `nextScenarioId`, replacing the previous standalone scenarios.
+- **Slide-based learning:** short, visual, multiple-choice interactions instead of long blocks of text.
+- **Light and dark themes:** a haunted-mansion dark theme with lightning effects and a daylight counterpart.
+- **Onboarding and navigation:** guided introduction, sidebar case navigation, and visible progress.
+- **Local progress:** progress and theme preferences are saved in browser `localStorage`.
+- **Dynamic Suspect Board:** board state is driven by hand-authored clue events and a pure `computeBoard` function.
+- **Case bible:** one source of truth for the victim, suspects, witnesses, clues, times, and rooms, validated by an audit script.
+- **Concept-driven code generation:** each case file generates Python code that matches the idea taught in that file.
+- **Visual storytelling:** supplied manor and suspect photos are used throughout the experience.
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | React + Vite |
+| Backend | Node.js + Express |
+| Storage | Local JSON-file storage |
+| Browser persistence | `localStorage` |
+| Database | None |
+| Authentication | None |
+| External AI | None |
 
 ## Setup
-Requires Node.js 18+.
+
+### Requirements
+
+- Node.js 18 or later
+- npm
+
+### Installation
 
 ```bash
 npm run installAll
@@ -36,17 +90,75 @@ cp server/.env.example server/.env
 npm run seed
 npm run dev
 ```
-- Frontend: http://localhost:5173
-- API: http://localhost:5000/api
 
-## Quality checks
-Scripts are defined in `client/package.json` and `server/package.json` (run `npm run` in each folder to list them): `audit:text` (text length, plain-language, banned terms), `audit:colors`, `audit:answers` (answer-position spread), `audit:story` (story consistency), `audit:type`, and `smoke`.
+### Local development URLs
 
-## Project structure
-- `client/` — React app (slides, Suspect Board, ledger, themes)
-- `server/` — Express API, seed data, case data, learning engine
-- `server/src/data/` — JSON storage and case data
-- `server/src/services/learningEngine.js` — concept-driven code generation
+| Service | URL |
+|---|---|
+| Frontend | [http://localhost:5173](http://localhost:5173) |
+| API | [http://localhost:5000/api](http://localhost:5000/api) |
 
-## Notes
-Progress and theme live in the browser's `localStorage`, so they don't sync across devices. All learning logic is deterministic and local, with no external AI calls.
+## Quality Checks
+
+The project includes scripts for checking content, presentation, story consistency, and application behaviour.
+
+Run `npm run` inside the `client/` and `server/` directories to see the scripts available in each package.
+
+The checks include:
+
+| Script | Purpose |
+|---|---|
+| `audit:text` | Checks text length, plain-language wording, and banned terms |
+| `audit:colors` | Checks colour usage |
+| `audit:answers` | Checks the spread of correct answer positions |
+| `audit:story` | Checks story and case consistency |
+| `audit:type` | Checks type-related constraints |
+| `smoke` | Runs smoke checks |
+
+Run each script from the package where it is defined.
+
+## Project Structure
+
+```text
+.
+├── client/
+│   └── React application
+│       ├── Slides and case-file flow
+│       ├── Suspect Board
+│       ├── Ledger
+│       └── Themes
+│
+└── server/
+    ├── Express API
+    └── src/
+        ├── data/
+        │   └── JSON storage and case data
+        └── services/
+            └── learningEngine.js
+                └── Concept-driven Python code generation
+```
+
+## Design Principles
+
+- **Story first:** learners experience a mystery rather than a conventional lesson.
+- **Learn by reasoning:** each question asks the player to apply an idea before seeing its formal name.
+- **Explain the code:** generated Python is paired with plain-language comments.
+- **Keep it accessible:** no coding background, typing, login, or external service is required.
+- **Make progress visible:** completed files, the Suspect Board, and the Ledger make the investigation feel continuous.
+
+## Notes & Limitations
+
+- Progress and theme preferences are stored in the browser's `localStorage`; they do not sync across devices or browsers.
+- The server uses local JSON-file storage rather than a database.
+- All learning logic is deterministic and local. The application does not make external AI calls.
+- The project requires Node.js 18 or later.
+
+---
+
+<div align="center">
+
+### Dive into the mystery. Learn Python. Solve the case.
+
+*THE LAST TESTAMENT · ROSEWOOD MANOR · CASE FILE 001*
+
+</div>
