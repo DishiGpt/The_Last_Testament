@@ -3166,6 +3166,296 @@
       ],
       "createdAt": "2026-11-18T14:18:34.369Z",
       "updatedAt": "2026-11-18T14:18:34.369Z"
+    },
+    {
+      "_id": "d93fe8fe-d505-4b01-bb7b-f032894af174",
+      "learnerName": "Guest learner",
+      "scenario": "rosewood-part-0",
+      "reasoning": "Gather suspects, rooms, and recorded clues.",
+      "promptText": "Explain the evidence and the Python structure step by step.",
+      "abstractionMap": [
+        {
+          "pattern": "Sequential thinking",
+          "pythonConcept": "statements and variables",
+          "explanation": "You described a step-by-step solution. Python starts by representing those steps as statements."
+        }
+      ],
+      "generatedCode": "suspects = [\"Mina\", \"Dev\", \"Iris\", \"Ronan\", \"Pia\"]  # PyBe: this line advances the example.\nrooms = [\"study\", \"library\", \"conservatory\"]  # PyBe: this line advances the example.\nclues = []  # PyBe: this line advances the example.\nprint(\"Suspect count:\", len(suspects))  # PyBe: this line advances the example.\nprint(\"Room count:\", len(rooms))  # PyBe: this line advances the example.",
+      "codeExplanation": "The code starts from your natural reasoning and turns it into Python structure: Sequential thinking becomes statements and variables.",
+      "promptScore": 85,
+      "attempts": 1,
+      "promptFeedback": [
+        "Include an example input or output to make the prompt testable."
+      ],
+      "reflection": "Gather suspects, rooms, and recorded clues.",
+      "misconceptions": [
+        "Reasoning is brief. Try naming the inputs, decision rule, and expected result."
+      ],
+      "masterySignals": [
+        "Recognized sequential thinking",
+        "Prompt maturity is developing"
+      ],
+      "createdAt": "2026-11-21T12:38:36.259Z",
+      "updatedAt": "2026-11-21T12:38:36.259Z"
+    },
+    {
+      "_id": "2216881e-65bf-4ba2-b5ff-61cf8f6a0dd5",
+      "learnerName": "Guest learner",
+      "scenario": "rosewood-part-0",
+      "reasoning": "Keep the five names in one ordered group.",
+      "promptText": "Explain the evidence and the Python structure step by step.",
+      "abstractionMap": [
+        {
+          "keywords": [
+            "list",
+            "items",
+            "collection",
+            "group",
+            "many"
+          ],
+          "pattern": "Collection handling",
+          "pythonConcept": "lists and dictionaries",
+          "explanation": "You grouped multiple values, so Python collections help store and process them."
+        }
+      ],
+      "generatedCode": "suspects = [\"Mina\", \"Dev\", \"Iris\", \"Ronan\", \"Pia\"]  # PyBe: this line advances the example.\nrooms = [\"study\", \"library\", \"conservatory\"]  # PyBe: this line advances the example.\nclues = []  # PyBe: this line advances the example.\nprint(\"Suspect count:\", len(suspects))  # PyBe: this line advances the example.\nprint(\"Room count:\", len(rooms))  # PyBe: this line advances the example.",
+      "codeExplanation": "The code starts from your natural reasoning and turns it into Python structure: Collection handling becomes lists and dictionaries.",
+      "promptScore": 85,
+      "attempts": 1,
+      "promptFeedback": [
+        "Include an example input or output to make the prompt testable."
+      ],
+      "reflection": "Keep the five names in one ordered group.",
+      "misconceptions": [
+        "Reasoning is brief. Try naming the inputs, decision rule, and expected result."
+      ],
+      "masterySignals": [
+        "Recognized collection handling",
+        "Prompt maturity is developing"
+      ],
+      "createdAt": "2026-11-21T12:38:38.362Z",
+      "updatedAt": "2026-11-21T12:38:38.362Z"
+    },
+    {
+      "_id": "e608f3ff-4a32-4c73-ae23-20c64ba4b20c",
+      "learnerName": "Guest learner",
+      "scenario": "rosewood-part-0",
+      "reasoning": "Compare facts, show steps, and explain the result.",
+      "promptText": "Compare facts, show steps, and explain the result.",
+      "abstractionMap": [
+        {
+          "keywords": [
+            "step",
+            "process",
+            "recipe",
+            "function",
+            "reuse"
+          ],
+          "pattern": "Reusable procedure",
+          "pythonConcept": "functions",
+          "explanation": "You described a repeatable process, which maps to a Python function."
+        },
+        {
+          "keywords": [
+            "compare",
+            "match",
+            "filter",
+            "find",
+            "search"
+          ],
+          "pattern": "Selection and filtering",
+          "pythonConcept": "comparisons and list comprehensions",
+          "explanation": "You are narrowing options using rules, which Python can express with comparisons and filters."
+        }
+      ],
+      "generatedCode": "suspects = [\"Mina\", \"Dev\", \"Iris\", \"Ronan\", \"Pia\"]  # PyBe: this line advances the example.\nrooms = [\"study\", \"library\", \"conservatory\"]  # PyBe: this line advances the example.\nclues = []  # PyBe: this line advances the example.\nprint(\"Suspect count:\", len(suspects))  # PyBe: this line advances the example.\nprint(\"Room count:\", len(rooms))  # PyBe: this line advances the example.",
+      "codeExplanation": "The code starts from your natural reasoning and turns it into Python structure: Reusable procedure becomes functions; Selection and filtering becomes comparisons and list comprehensions.",
+      "promptScore": 60,
+      "attempts": 2,
+      "promptFeedback": [
+        "Include an example input or output to make the prompt testable.",
+        "Name the Python concept you think may apply."
+      ],
+      "reflection": "Compare facts, show steps, and explain the result.",
+      "misconceptions": [
+        "Reasoning is brief. Try naming the inputs, decision rule, and expected result."
+      ],
+      "masterySignals": [
+        "Recognized reusable procedure",
+        "Recognized selection and filtering"
+      ],
+      "createdAt": "2026-11-21T12:38:43.265Z",
+      "updatedAt": "2026-11-21T12:38:43.265Z"
+    },
+    {
+      "_id": "daa29489-9c39-48fa-951c-1e80202ff790",
+      "learnerName": "Guest learner",
+      "scenario": "rosewood-part-0",
+      "reasoning": "Lay out the facts before making a guess.",
+      "promptText": "Explain the evidence and the Python structure step by step.",
+      "abstractionMap": [
+        {
+          "pattern": "Sequential thinking",
+          "pythonConcept": "statements and variables",
+          "explanation": "You described a step-by-step solution. Python starts by representing those steps as statements."
+        }
+      ],
+      "generatedCode": "suspects = [\"Mina\", \"Dev\", \"Iris\", \"Ronan\", \"Pia\"]  # PyBe: this line advances the example.\nrooms = [\"study\", \"library\", \"conservatory\"]  # PyBe: this line advances the example.\nclues = []  # PyBe: this line advances the example.\nprint(\"Suspect count:\", len(suspects))  # PyBe: this line advances the example.\nprint(\"Room count:\", len(rooms))  # PyBe: this line advances the example.",
+      "codeExplanation": "The code starts from your natural reasoning and turns it into Python structure: Sequential thinking becomes statements and variables.",
+      "promptScore": 85,
+      "attempts": 1,
+      "promptFeedback": [
+        "Include an example input or output to make the prompt testable."
+      ],
+      "reflection": "Lay out the facts before making a guess.",
+      "misconceptions": [
+        "Reasoning is brief. Try naming the inputs, decision rule, and expected result."
+      ],
+      "masterySignals": [
+        "Recognized sequential thinking",
+        "Prompt maturity is developing"
+      ],
+      "createdAt": "2026-11-21T12:38:48.020Z",
+      "updatedAt": "2026-11-21T12:38:48.020Z"
+    },
+    {
+      "_id": "b3144653-9297-49de-a639-cdf0823265fd",
+      "learnerName": "Guest learner",
+      "scenario": "rosewood-part-5",
+      "reasoning": "One arrangement fits every clue without a contradiction.",
+      "promptText": "Explain the evidence and the Python structure step by step.",
+      "abstractionMap": [
+        {
+          "keywords": [
+            "repeat",
+            "again",
+            "each",
+            "every",
+            "loop"
+          ],
+          "pattern": "Repetition",
+          "pythonConcept": "for / while loops",
+          "explanation": "Your reasoning repeats an action, which maps naturally to loop constructs."
+        }
+      ],
+      "generatedCode": "proof = \"blue coat at 8:10 pm\"  # PyBe: this line advances the example.\nsol = {\"suspect\": \"Iris\", \"room\": \"study\"}  # PyBe: this line advances the example.\nprint(\"Decisive clue:\", proof)  # PyBe: this line advances the example.\nprint(\"Consistent result:\", sol)  # PyBe: this line advances the example.",
+      "codeExplanation": "The code starts from your natural reasoning and turns it into Python structure: Repetition becomes for / while loops.",
+      "promptScore": 85,
+      "attempts": 1,
+      "promptFeedback": [
+        "Include an example input or output to make the prompt testable."
+      ],
+      "reflection": "One arrangement fits every clue without a contradiction.",
+      "misconceptions": [
+        "Reasoning is brief. Try naming the inputs, decision rule, and expected result."
+      ],
+      "masterySignals": [
+        "Recognized repetition",
+        "Prompt maturity is developing"
+      ],
+      "createdAt": "2026-11-21T12:39:17.510Z",
+      "updatedAt": "2026-11-21T12:39:17.510Z"
+    },
+    {
+      "_id": "08c96dbb-ec62-4226-a5c4-4944e913c848",
+      "learnerName": "Guest learner",
+      "scenario": "rosewood-part-5",
+      "reasoning": "The clues, checks, and surviving result.",
+      "promptText": "Explain the evidence and the Python structure step by step.",
+      "abstractionMap": [
+        {
+          "pattern": "Sequential thinking",
+          "pythonConcept": "statements and variables",
+          "explanation": "You described a step-by-step solution. Python starts by representing those steps as statements."
+        }
+      ],
+      "generatedCode": "proof = \"blue coat at 8:10 pm\"  # PyBe: this line advances the example.\nsol = {\"suspect\": \"Iris\", \"room\": \"study\"}  # PyBe: this line advances the example.\nprint(\"Decisive clue:\", proof)  # PyBe: this line advances the example.\nprint(\"Consistent result:\", sol)  # PyBe: this line advances the example.",
+      "codeExplanation": "The code starts from your natural reasoning and turns it into Python structure: Sequential thinking becomes statements and variables.",
+      "promptScore": 85,
+      "attempts": 1,
+      "promptFeedback": [
+        "Include an example input or output to make the prompt testable."
+      ],
+      "reflection": "The clues, checks, and surviving result.",
+      "misconceptions": [
+        "Reasoning is brief. Try naming the inputs, decision rule, and expected result."
+      ],
+      "masterySignals": [
+        "Recognized sequential thinking",
+        "Prompt maturity is developing"
+      ],
+      "createdAt": "2026-11-21T12:39:19.633Z",
+      "updatedAt": "2026-11-21T12:39:19.633Z"
+    },
+    {
+      "_id": "bfc30525-c913-4088-b2b0-eb106774e34e",
+      "learnerName": "Guest learner",
+      "scenario": "rosewood-part-5",
+      "reasoning": "Explain Iris, the study, and 8:05 using clues.",
+      "promptText": "Explain Iris, the study, and 8:05 using clues.",
+      "abstractionMap": [
+        {
+          "pattern": "Sequential thinking",
+          "pythonConcept": "statements and variables",
+          "explanation": "You described a step-by-step solution. Python starts by representing those steps as statements."
+        }
+      ],
+      "generatedCode": "proof = \"blue coat at 8:10 pm\"  # PyBe: this line advances the example.\nsol = {\"suspect\": \"Iris\", \"room\": \"study\"}  # PyBe: this line advances the example.\nprint(\"Decisive clue:\", proof)  # PyBe: this line advances the example.\nprint(\"Consistent result:\", sol)  # PyBe: this line advances the example.",
+      "codeExplanation": "The code starts from your natural reasoning and turns it into Python structure: Sequential thinking becomes statements and variables.",
+      "promptScore": 70,
+      "attempts": 1,
+      "promptFeedback": [
+        "Include an example input or output to make the prompt testable.",
+        "Name the Python concept you think may apply."
+      ],
+      "reflection": "Explain Iris, the study, and 8:05 using clues.",
+      "misconceptions": [
+        "Reasoning is brief. Try naming the inputs, decision rule, and expected result."
+      ],
+      "masterySignals": [
+        "Recognized sequential thinking",
+        "Prompt maturity is developing"
+      ],
+      "createdAt": "2026-11-21T12:39:22.041Z",
+      "updatedAt": "2026-11-21T12:39:22.041Z"
+    },
+    {
+      "_id": "d491b198-5920-4ced-91eb-1fa92198d9ea",
+      "learnerName": "Guest learner",
+      "scenario": "rosewood-part-5",
+      "reasoning": "It kept only the arrangement fitting every clue.",
+      "promptText": "Explain the evidence and the Python structure step by step.",
+      "abstractionMap": [
+        {
+          "keywords": [
+            "repeat",
+            "again",
+            "each",
+            "every",
+            "loop"
+          ],
+          "pattern": "Repetition",
+          "pythonConcept": "for / while loops",
+          "explanation": "Your reasoning repeats an action, which maps naturally to loop constructs."
+        }
+      ],
+      "generatedCode": "proof = \"blue coat at 8:10 pm\"  # PyBe: this line advances the example.\nsol = {\"suspect\": \"Iris\", \"room\": \"study\"}  # PyBe: this line advances the example.\nprint(\"Decisive clue:\", proof)  # PyBe: this line advances the example.\nprint(\"Consistent result:\", sol)  # PyBe: this line advances the example.",
+      "codeExplanation": "The code starts from your natural reasoning and turns it into Python structure: Repetition becomes for / while loops.",
+      "promptScore": 85,
+      "attempts": 1,
+      "promptFeedback": [
+        "Include an example input or output to make the prompt testable."
+      ],
+      "reflection": "It kept only the arrangement fitting every clue.",
+      "misconceptions": [
+        "Reasoning is brief. Try naming the inputs, decision rule, and expected result."
+      ],
+      "masterySignals": [
+        "Recognized repetition",
+        "Prompt maturity is developing"
+      ],
+      "createdAt": "2026-11-21T12:39:25.566Z",
+      "updatedAt": "2026-11-21T12:39:25.566Z"
     }
   ]
 }

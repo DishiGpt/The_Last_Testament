@@ -42,12 +42,12 @@ export default function Onboarding({ onFinish, caseSolved = false }) {
   }
 
   return (
-    <div className="onboarding" role="dialog" aria-label="Welcome to PyBe" onKeyDown={onKey} tabIndex={-1}>
+    <div className="onboarding" role="dialog" aria-label="Welcome to The Last Testament" onKeyDown={onKey} tabIndex={-1}>
       <div className="onboard-card" key={screen.key}>
         <img className="onboard-manor" src={manorAsset} alt="Rosewood Manor" width="448" height="252" loading="eager" />
         <div className="onboard-brand">
           <MagnifierBrand size={40} />
-          <span>PyBe</span>
+          <span>The Last Testament</span>
         </div>
         <p className="onboard-kicker">{screen.kicker}</p>
         <h1 className="onboard-title">

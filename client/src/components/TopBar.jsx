@@ -14,7 +14,7 @@ export default function TopBar({ storyParts, completedParts, activePartId, onJum
       <div className="top-brand">
         <MagnifierBrand size={30} />
         <div className="top-wordmark">
-          <strong>PyBe</strong>
+          <strong>The Last Testament</strong>
           <span>case files</span>
         </div>
       </div>
